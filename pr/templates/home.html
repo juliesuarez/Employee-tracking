@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> List</title>
+</head>
+
+<body>
+    <h1>Fruit List</h1>
+    <ul>
+        {% for fruit in fruits %}
+        <li>
+            <strong>{{ fruit.name }}</strong><br>
+            Price: ${{ fruit.price }}<br>
+            {% if fruit.image %}
+                <img src="{{ fruit.image.url }}" alt="{{ fruit.name }} Image" width="100">
+            {% else %}
+                No image available
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

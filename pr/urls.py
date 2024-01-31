@@ -1,0 +1,41 @@
+from django.urls import path
+from .views import TaskListCreateAPIView, TaskRetrieveUpdateDestroyAPIView,FruitListCreateAPIView,FruitRetrieveUpdateDestroyAPIView,EducationDetailListCreateAPIView,EducationDetailRetrieveUpdateDestroyAPIView,ManageListCreateAPIView,ManageRetrieveUpdateDestroyAPIView,ClubListCreateAPIView,ClubRetrieveUpdateDestroyAPIView,StudentListCreateAPIView,StudentRetrieveAPIView,StudentUpdateAPIView,StudentDestroyAPIView,StaffListCreateAPIView,StaffRetrieveAPIView,StaffUpdateAPIView,StaffDestroyAPIView,CourseListCreateAPIView,CourseRetrieveAPIView,CourseUpdateAPIView,CourseDestroyAPIView,ModuleListCreateAPIView,ModuleRetrieveAPIView,ModuleUpdateAPIView,ModuleDestroyAPIView,DocumentFormUploadView,DocumentDetailView,GenericUserListCreateAPIView,GenericUserRetrieveAPIView,GenericUserUpdateAPIView,GenericUserDestroyAPIView
+
+
+urlpatterns = [
+    path('pr/tasks/', TaskListCreateAPIView.as_view(), name='task-list-create'),
+    path('tasks/<int:pk>/', TaskRetrieveUpdateDestroyAPIView.as_view(), name='task-retrieve-update-destroy'),
+    path('pr/fruits/', FruitListCreateAPIView.as_view(), name='fruit-list-create'),
+    path('fruits/<int:pk>/', FruitRetrieveUpdateDestroyAPIView.as_view(), name='fruit-retrieve-update-destroy'),
+    path('pr/education/', EducationDetailListCreateAPIView.as_view(), name='education-list-create'),
+    path('education/<int:pk>/', EducationDetailRetrieveUpdateDestroyAPIView.as_view(), name='education-retrieve-update-destroy'),
+    path('pr/manage/', ManageListCreateAPIView.as_view(), name='manage-list-create'),
+    path('manage/<int:pk>/', ManageRetrieveUpdateDestroyAPIView.as_view(), name='manage-retrieve-update-destroy'),
+    path('pr/club/', ClubListCreateAPIView.as_view(), name='club-list-create'),
+    path('club/<int:pk>/', ClubRetrieveUpdateDestroyAPIView.as_view(), name='club-retrieve-update-destroy'),
+    path('pr/student/', StudentListCreateAPIView.as_view(), name='student-list-create'),
+    path('student/<int:pk>/', StudentRetrieveAPIView.as_view(), name='student-retrieve'),
+    path('student/<int:pk>/', StudentUpdateAPIView.as_view(), name='student-update'),
+    path('student/<int:pk>/', StudentDestroyAPIView.as_view(), name='student-destroy'),
+    path('pr/staff/', StaffListCreateAPIView.as_view(), name='staff-list-create'),
+    path('staff/<int:pk>/', StaffRetrieveAPIView.as_view(), name='staff-retrieve'),
+    path('staff/<int:pk>/', StaffUpdateAPIView.as_view(), name='staff-update'),
+    path('staff/<int:pk>/', StaffDestroyAPIView.as_view(), name='staff-destroy'),
+    path('pr/course/', CourseListCreateAPIView.as_view(), name='course-list-create'),
+    path('course/<int:pk>/', CourseRetrieveAPIView.as_view(), name='course-retrieve'),
+    path('course/<int:pk>/', CourseUpdateAPIView.as_view(), name='course-update'),
+    path('course/<int:pk>/', CourseDestroyAPIView.as_view(), name='course-destroy'),
+    path('pr/module/', ModuleListCreateAPIView.as_view(), name='module-list-create'),
+    path('module/<int:pk>/', ModuleRetrieveAPIView.as_view(), name='module-retrieve'),
+    path('module/<int:pk>/', ModuleUpdateAPIView.as_view(), name='module-update'),
+    path('module/<int:pk>/', ModuleDestroyAPIView.as_view(), name='module-destroy'),
+    path('document/', DocumentFormUploadView.as_view(), name='document_form_upload'),
+    path('document/<int:pk>/', DocumentDetailView.as_view(), name='document_detail'),
+    path('document/', DocumentFormUploadView.as_view(), name='document_form_upload'),
+    path('document/<int:pk>/', DocumentDetailView.as_view(), name='document_detail'),
+    path('pr/genericusers/', GenericUserListCreateAPIView.as_view(), name='genericuser-list-create'),
+    path('genericusers/<int:pk>/', GenericUserRetrieveAPIView.as_view(), name='genericuser-retrieve'),
+    path('genericusers/<int:pk>/', GenericUserUpdateAPIView.as_view(), name='genericuser-update'),
+    path('genericusers/<int:pk>/', GenericUserDestroyAPIView.as_view(), name='genericuser-destroy'),
+    
+]

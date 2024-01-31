@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Form</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .fruit-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .fruit-form label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .fruit-form input,
+        .fruit-form select {
+            width: 100%;
+            height: 30px;
+            margin-top: 5px;
+            padding: 0 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .fruit-form button {
+            width: 100%;
+            height: 30px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Julie's Practice</h1>
+        <div class="fruit-form">
+            <form method="POST" action="">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
