@@ -61,7 +61,6 @@ jsonpointer==2.4
 jsonschema==4.20.0
 jsonschema-specifications==2023.11.2
 keyring==23.5.0
-language-selector==0.1
 launchpadlib==1.10.16
 lazr.restfulclient==0.14.4
 lazr.uri==1.0.6
