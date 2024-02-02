@@ -1,8 +1,13 @@
 from django import forms
-from .models import Document
+from django.contrib.auth.forms import AuthenticationForm
 
-class DocumentForm(forms.ModelForm):
-    class Meta:
-        model = Document
-        fields = ['name', 'file_type']
+class LoginForm(AuthenticationForm):
+    username = forms.CharField(
+        label="Username",
+        max_length=30,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'name': 'username'}),
+    )
+    password = forms.CharField(
+ 
+    widget=forms.PasswordInput(attrs={'class': 'form-control', 'password': 'password'})),
 
